@@ -114,9 +114,14 @@
 	grid-area: mainC;
 
 	.Post {
+		margin-bottom: 250px;
+		background-color: #fff;
 
 		// .Post__img
-		&__img {}
+		&__img {
+			object-position: center;
+			object-fit: fill;
+		}
 
 		// .Post__subscr
 		&__subscr {
@@ -125,7 +130,7 @@
 			// .Post__subscr_info
 			&_info {
 				display: flex;
-				
+
 			}
 
 			// .Post__subscr_info-btn
@@ -142,7 +147,7 @@
 				background-repeat: no-repeat;
 			}
 
-		// .Post__subscr_text
+			// .Post__subscr_text
 			&_text {
 				opacity: 0.7;
 				font-size: 17px;
@@ -165,6 +170,7 @@
 		width: 100%;
 		height: 60px;
 		margin: 20px 0 20px 20px;
+
 		// .info__title
 		&__title {
 			font-size: 22px;
@@ -178,12 +184,16 @@
 			display: flex;
 			width: 100%;
 
-			&_date, &_comments, &_public, &_views, &_likes {
+			&_date,
+			&_comments,
+			&_public,
+			&_views,
+			&_likes {
 				position: relative;
 				padding-left: 30px;
 				margin-left: 30px;
 
-				&::before{
+				&::before {
 					content: "";
 					position: absolute;
 					top: 1px;
@@ -191,44 +201,47 @@
 					width: 20px;
 					height: 20px;
 					background-repeat: no-repeat;
-					background-position: center;				
+					background-position: center;
 				}
 			}
+
 			// .info__items_date
 			&_date {
 				margin-left: 0;
-				&::before{
+
+				&::before {
 					background-image: url(../img/Calendar.png);
-				}				
+				}
 			}
 
 			// .info__items_comments
 			&_comments {
-				&::before{
+				&::before {
 					background-image: url(../img/Bubble.png);
-				}	
+				}
 			}
 
 			// .info__items_public
 			&_public {
-				&::before{
+				&::before {
 					background-image: url(../img/Location.png);
-				}	
+				}
 			}
 
 			// .info__items_views
 			&_views {
-				&::before{
+				&::before {
 					background-image: url(../img/Eye.png);
-				}	
+				}
 			}
 
 			// .info__items_likes
 			&_likes {
 				margin-left: auto;
-				&::before{
+
+				&::before {
 					background-image: url(../img/Heart.png);
-				}	
+				}
 			}
 		}
 	}

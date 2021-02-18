@@ -122,6 +122,18 @@
   grid-area: mainC;
 }
 
+.mainC .Post {
+  margin-bottom: 250px;
+  background-color: #fff;
+}
+
+.mainC .Post__img {
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
 .mainC .Post__subscr {
   height: 60px;
 }
