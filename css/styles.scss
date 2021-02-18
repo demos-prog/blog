@@ -97,6 +97,7 @@
 	// .mainTitle__text
 	&__text {
 		text-decoration: underline;
+		margin-bottom: 40px;
 	}
 }
 
@@ -124,65 +125,113 @@
 			// .Post__subscr_info
 			&_info {
 				display: flex;
+				
 			}
 
 			// .Post__subscr_info-btn
 			&_info-btn {
+				margin: 15px 0;
 				position: relative;
 				cursor: pointer;
 				width: 60px;
+				height: 60px;
 				background-color: #1ABC9C;
 				border-radius: 4px;
-
-				&::before{
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 23px;
-					height: 23px;
-				
-					background-image: url(../img/btn_icon.svg);
-				}
+				background-image: url(../img/New.png);
+				background-position: center;
+				background-repeat: no-repeat;
 			}
 
 		// .Post__subscr_text
-			&_text {}
+			&_text {
+				opacity: 0.7;
+				font-size: 17px;
+				margin-bottom: 25px;
+			}
 
 			// .Post__subscr_btn
-			&_btn {}
+			&_btn {
+				cursor: pointer;
+				padding: 14px 18px;
+				background-color: #1ABC9C;
+				color: #fff;
+				border-radius: 4px;
+				font-size: 17px;
+			}
 		}
 	}
 
 	.info {
 		width: 100%;
-
+		height: 60px;
+		margin: 20px 0 20px 20px;
 		// .info__title
-		&__title {}
+		&__title {
+			font-size: 22px;
+		}
 
 		// .info__items
 		&__items {
+			margin-top: 5px;
+			font-size: 16px;
+			opacity: 0.6;
 			display: flex;
 			width: 100%;
-			justify-content: space-around;
 
+			&_date, &_comments, &_public, &_views, &_likes {
+				position: relative;
+				padding-left: 30px;
+				margin-left: 30px;
+
+				&::before{
+					content: "";
+					position: absolute;
+					top: 1px;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					background-repeat: no-repeat;
+					background-position: center;				
+				}
+			}
 			// .info__items_date
-			&_date {}
+			&_date {
+				margin-left: 0;
+				&::before{
+					background-image: url(../img/Calendar.png);
+				}				
+			}
 
 			// .info__items_comments
-			&_comments {}
+			&_comments {
+				&::before{
+					background-image: url(../img/Bubble.png);
+				}	
+			}
 
 			// .info__items_public
-			&_public {}
+			&_public {
+				&::before{
+					background-image: url(../img/Location.png);
+				}	
+			}
 
 			// .info__items_views
-			&_views {}
+			&_views {
+				&::before{
+					background-image: url(../img/Eye.png);
+				}	
+			}
 
 			// .info__items_likes
-			&_likes {}
+			&_likes {
+				margin-left: auto;
+				&::before{
+					background-image: url(../img/Heart.png);
+				}	
+			}
 		}
 	}
-
 
 }
 
