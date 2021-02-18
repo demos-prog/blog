@@ -1,7 +1,7 @@
 .wrapper {
 	max-width: 1920px;
 	font-family: lato;
-	font-size: 17px;
+	font-size: 25px;
 }
 
 .container {
@@ -90,7 +90,7 @@
 
 	// .mainTitle__title
 	&__title {
-		font-size: 30px;
+		font-size: 50px;
 		font-weight: 700;
 	}
 
@@ -100,4 +100,92 @@
 	}
 }
 
-.mainCont {}
+.mainCont {
+	display: grid;
+	grid-template-columns: 1.3fr 0.7fr;
+	grid-template-rows: 1fr;
+	gap: 15px 10px;
+	grid-template-areas:
+		"mainC aside";
+}
+
+.mainC {
+	grid-area: mainC;
+
+	.Post {
+
+		// .Post__img
+		&__img {}
+
+		// .Post__subscr
+		&__subscr {
+			height: 60px;
+
+			// .Post__subscr_info
+			&_info {
+				display: flex;
+			}
+
+			// .Post__subscr_info-btn
+			&_info-btn {
+				position: relative;
+				cursor: pointer;
+				width: 60px;
+				background-color: #1ABC9C;
+				border-radius: 4px;
+
+				&::before{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 23px;
+					height: 23px;
+				
+					background-image: url(../img/btn_icon.svg);
+				}
+			}
+
+		// .Post__subscr_text
+			&_text {}
+
+			// .Post__subscr_btn
+			&_btn {}
+		}
+	}
+
+	.info {
+		width: 100%;
+
+		// .info__title
+		&__title {}
+
+		// .info__items
+		&__items {
+			display: flex;
+			width: 100%;
+			justify-content: space-around;
+
+			// .info__items_date
+			&_date {}
+
+			// .info__items_comments
+			&_comments {}
+
+			// .info__items_public
+			&_public {}
+
+			// .info__items_views
+			&_views {}
+
+			// .info__items_likes
+			&_likes {}
+		}
+	}
+
+
+}
+
+.aside {
+	grid-area: aside;
+}
