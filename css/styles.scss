@@ -1,4 +1,6 @@
 .wrapper {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 77, 1) 24%, rgba(0, 212, 255, 1) 100%);
 	max-width: 1920px;
 	font-family: lato;
 	font-size: 25px;
@@ -80,6 +82,7 @@
 
 .main {
 	margin-top: 150px;
+	margin-bottom: 50px;
 	position: relative;
 	z-index: 2;
 }
@@ -603,4 +606,50 @@
 	font-weight: bold;
 	cursor: pointer;
 	border-radius: 4px;
+}
+
+.footer {
+	background-color: #fff;
+}
+
+.footerCont{
+	display: flex;
+}
+
+.fSection1 {
+	max-width: 265px;
+	padding: 0 15px;
+	color: #BDC3C7;
+	font-size: 13px;
+	// .fSection1__text
+	&__text {}
+
+	// .fSection1__adress
+	&__adress {}
+
+	// .fSection1__phone
+	&__phone {}
+
+	// .fSection1__fax
+	&__fax {}
+
+	// .fSection1__contacts
+	&__contacts {
+		display: flex;
+
+		// .fSection1__contacts_item
+		&_item {
+			background-color: #cccccc;
+		}
+
+		// .fSection1__contacts_item-img
+		&_item-img {}
+	}
+}
+
+.footTitle {
+	color: #BDC3C7;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
 }

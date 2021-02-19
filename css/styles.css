@@ -1,4 +1,7 @@
 .wrapper {
+  background: #020024;
+  background: -webkit-gradient(linear, left top, right top, from(#020024), color-stop(24%, #09794d), to(#00d4ff));
+  background: linear-gradient(90deg, #020024 0%, #09794d 24%, #00d4ff 100%);
   max-width: 1920px;
   font-family: lato;
   font-size: 25px;
@@ -86,6 +89,7 @@
 
 .main {
   margin-top: 150px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 2;
 }
@@ -633,5 +637,39 @@
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+}
+
+.footer {
+  background-color: #fff;
+}
+
+.footerCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fSection1 {
+  max-width: 265px;
+  padding: 0 15px;
+  color: #BDC3C7;
+  font-size: 13px;
+}
+
+.fSection1__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fSection1__contacts_item {
+  background-color: #cccccc;
+}
+
+.footTitle {
+  color: #BDC3C7;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=styles.css.map */
