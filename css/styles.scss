@@ -129,6 +129,7 @@
 		// .Post__subscr
 		&__subscr {
 			padding: 0 15px;
+
 			// .Post__subscr_info
 			&_info {
 				display: flex;
@@ -251,15 +252,17 @@
 			}
 		}
 	}
-
-
 }
 
-.line{
+.line {
 	border-bottom: 2px solid #1ABC9C;
 }
+
 .aside {
+	padding: 15px;
 	grid-area: aside;
+	background-color: #fff;
+	border-radius: 5px;
 }
 
 .sound {
@@ -276,7 +279,7 @@
 	&__text {
 		position: relative;
 		font-size: 24px;
-		padding: 38px 0 38px 100px;
+		padding: 24px 0 24px 100px;
 
 		&::before {
 			content: "";
@@ -350,6 +353,11 @@
 	color: #fff;
 }
 
+.selected:hover {
+	cursor: auto;
+	background-color: #1ABC9C;
+}
+
 .socialWebs {
 	width: 100%;
 	display: flex;
@@ -404,4 +412,195 @@
 
 .four {
 	background-color: rgb(235, 50, 152);
+}
+
+.aside__title {
+	margin-top: 30px;
+	color: #34495E;
+	font-weight: bold;
+	font-size: 16px;
+	padding: 7px;
+	border-bottom: 1px solid #707070;
+	border-left: 3px solid #1ABC9C;
+}
+
+.categories {
+	margin-bottom: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	gap: 0px 20px;
+	grid-template-areas:
+		"item1 item2"
+		"item3 item4"
+		"item5 item6"
+		"item7 item8"
+		"item9 item10";
+}
+
+.it {
+	cursor: pointer;
+	padding: 10px 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #707070;
+}
+
+.cat-text,
+.cat-numb {
+	white-space: nowrap;
+	font-size: 13px;
+	color: #707070;
+}
+
+.item1 {
+	grid-area: item1;
+}
+
+.item2 {
+	grid-area: item2;
+}
+
+.item3 {
+	grid-area: item3;
+}
+
+.item4 {
+	grid-area: item4;
+}
+
+.item5 {
+	grid-area: item5;
+}
+
+.item6 {
+	grid-area: item6;
+}
+
+.item7 {
+	grid-area: item7;
+}
+
+.item8 {
+	grid-area: item8;
+}
+
+.item9 {
+	grid-area: item9;
+}
+
+.item10 {
+	grid-area: item10;
+}
+
+.post-item {
+	display: flex;
+	height: 60px;
+	margin-top: 15px;
+
+	// .post-item__img
+	&__img {
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
+		object-position: center;
+		margin-right: 10px;
+	}
+
+	// .post-item__comment
+	&__comment {
+
+		// .post-item__comment_text
+		&_text {
+			cursor: pointer;
+			margin-bottom: 13px;
+			color: #444444;
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		// .post-item__comment_date
+		&_date {
+			position: relative;
+			color: #5F5F5F;
+			font-size: 12px;
+			padding-left: 24px;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-image: url(../img/Calendar.png);
+			}
+		}
+	}
+}
+
+.panel {
+	color: #FFFFFF;
+	border-bottom: 1px solid #1ABC9C;
+
+	&__btn {
+		padding: 10px;
+	}
+}
+
+.sideImgs {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+
+	// .sideImgs_img
+	&_img {
+		margin-right: 10px;
+		width: 80px;
+		height: 65px;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.sideImgs_img:nth-last-child(1) {
+	margin-right: 0;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+
+	// .tags_tag
+	&_tag {
+		margin-right: 10px;
+		margin-top: 10px;
+		border-radius: 2px;
+		padding: 8px 10px;
+		font-size: 13px;
+		font-weight: bold;
+		background-color: #cccccc;
+
+		&>a {
+			color: #666666;
+		}
+	}
+}
+
+#email {
+	margin: 15px 0;
+	width: 100%;
+	border: 1px solid #E7E7E7;
+	padding: 10px 15px;
+}
+
+.SubscrBtn {
+	padding: 10px 15px;
+	background-color: #1ABC9C;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 4px;
 }
