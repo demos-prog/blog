@@ -70,6 +70,12 @@
 	}
 }
 
+@media(max-width:1000px) {
+	.headerCont__text {
+		display: none;
+	}
+}
+
 .headerUnderImg {
 	width: 100%;
 	height: 280px;
@@ -118,7 +124,6 @@
 	grid-area: mainC;
 
 	.Post {
-		min-width: 700px;
 		padding-bottom: 50px;
 		background-color: #fff;
 
@@ -202,7 +207,7 @@
 			&_likes {
 				position: relative;
 				padding-left: 30px;
-				margin-left: 30px;
+				margin-left: auto;
 
 				&::before {
 					content: "";
@@ -258,6 +263,36 @@
 	}
 }
 
+@media(max-width:700px) {
+	.mainC .info__title {
+		font-size: 16px;
+	}
+
+	.mainC .info__items {
+		font-size: 12px;
+	}
+
+	.mainC .info__items_date::before,
+	.mainC .info__items_comments::before,
+	.mainC .info__items_public::before,
+	.mainC .info__items_views::before,
+	.mainC .info__items_likes::before {
+		top: -3px;
+	}
+}
+
+
+@media(max-width:550px) {
+
+	.mainC .info__items_date::before,
+	.mainC .info__items_comments::before,
+	.mainC .info__items_public::before,
+	.mainC .info__items_views::before,
+	.mainC .info__items_likes::before {
+		left: 8px;
+	}
+}
+
 .line {
 	border-bottom: 2px solid #1ABC9C;
 }
@@ -269,12 +304,21 @@
 	border-radius: 5px;
 }
 
+@media(max-width:1000px) {
+	.aside {
+		display: none;
+	}
+
+	.mainCont {
+		display: block;
+	}
+}
+
 .sound {
 	background-image: url(../img/Volume.png);
 }
 
 .notice {
-	height: 150px;
 	background-color: #1ABC9C;
 	color: #fff;
 	margin-bottom: 50px;
@@ -304,6 +348,7 @@
 	&__autor {
 		font-size: 18px;
 		padding-left: 100px;
+		padding-bottom: 30px;
 	}
 }
 
@@ -612,7 +657,7 @@
 
 .footer {
 	background-color: #fff;
-	z-index: 2;
+	z-index: 20;
 	position: relative;
 }
 
@@ -734,25 +779,24 @@
 
 .underground {
 	color: #fff;
-	// .underground__text
-	&__text {
-	}
+
 	// .underground__menu
 	&__menu {
 		margin-left: auto;
+
 		// .underground__menu_item
-		&_item{
+		&_item {
 			color: #fff;
 			margin-right: 15px;
 		}
 	}
 }
 
-.underground__menu_item:nth-last-child(1){
+.underground__menu_item:nth-last-child(1) {
 	margin-right: 0;
 }
 
-.undergroundCont{
+.undergroundCont {
 	padding: 30px 15px;
 	display: flex;
 	font-size: 12px;
@@ -764,4 +808,135 @@
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-bottom: 35px;
+}
+
+// Burger - start
+:root {
+	background-color: #333;
+}
+
+.contain {
+	margin: 0 30px 0 auto;
+	display: flex;
+	flex-direction: column;
+	background-color: #1ABC9C;
+}
+
+.menu-icon {
+	margin: auto;
+	display: grid;
+	place-items: center;
+	height: 55px;
+	width: 55px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.menu-icon>span {
+	width: 55px;
+	height: 3px;
+	display: block;
+	background-color: rgba(255, 255, 255, 1);
+	transition: all 0.3s ease-in-out;
+	justify-self: end;
+}
+
+.menu-icon.active span:nth-child(1) {
+	transform-origin: center center;
+	transform: rotate(-45deg) translate(-23%, 390%);
+	width: 60px;
+}
+
+.menu-icon.active span:nth-child(2) {
+	transform: translateX(60px);
+}
+
+.menu-icon.active span:nth-child(3) {
+	transform-origin: center center;
+	transform: rotate(45deg) translate(-23%, -390%);
+	width: 60px;
+}
+
+.secondMenu {
+	margin: 0 auto;
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.hide {
+	display: none;
+}
+
+.burgItem {
+	margin: 10px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 10px 0;
+
+	&:hover {
+		color: wheat;
+		text-shadow: 0 0 5px black;
+	}
+
+	&:nth-last-child(1) {
+		margin-bottom: 30px;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+// Burger - end
+
+.secondMenu .headerCont__nav_item {
+	border: 1px solid #1ABC9C;
+	padding: 5px;
+	width: 100%;
+	text-align: center;
+	margin: 0 0 10px;
+}
+
+@media(max-width: 1150px) {
+	.footerCont {
+		padding: 0 0 50px 0;
+		flex-wrap: wrap;
+	}
+
+	.fSection1,
+	.fSection2,
+	.fSection3,
+	.fSection4 {
+		padding: 50px 15px 0 15px;
+		max-width: unset;
+		flex: 1 1 40%;
+	}
+
+	.fSection1__contacts{
+		width: 190px;
+	}
+
+	.fSection4__line{
+		display: flex;
+		flex-wrap: nowrap;
+	}
+
+	.fSection4__line_img{
+		margin-right: 10px;
+	}
+}
+
+@media(max-width:550px){
+	.undergroundCont{
+		flex-direction: column;
+	}
+	.underground__text{
+		text-align: center;
+	}
+
+	.underground__menu{
+		margin: 15px auto 0;
+	}
 }
